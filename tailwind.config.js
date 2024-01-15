@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-      worksans: ['Work Sans', 'sans serif']
+      worksans: ['Work Sans', 'sans serif'],
+      poppins: ['Poppins', 'sans serif']
     },
     screens: {
       'sm': {'min': '330px', 'max': '767px'}, 
