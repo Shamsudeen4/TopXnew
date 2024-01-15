@@ -1,0 +1,158 @@
+.ChallengeDetail{
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+}
+.ChallengeDetail-section1{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 50px;
+    /* background-color: teal; */
+    
+    
+}
+.ChallengeDetail-section1 h3{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+.ChallengeDetail-section1 p{
+    /* width: 0%; */
+    color: #00000080;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.step-container{
+    width: 80%;
+    background-color:#7879F1 ;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px; 
+    padding: 20px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.step-container h1{
+    font-size: 23px;
+}
+.step-list{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.step-border{
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.step-border h1{
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    font-size: 25px;
+    font-weight: bold;
+}
+.step-border h2{
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+.step-border p{
+    color: white;
+    font-size: 13px;
+}
+.challenge-livestream{
+    width: 60%;
+    /* margin-top: 70px; */
+    padding: 100px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+.challenge-livestream p{
+    font-size: 20px;
+}
+.challenge-livestream p span{
+    color: #F178B6;
+}
+.livestream-btn{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.livestream-btn button{
+    padding: 10px 50px ;
+    border-radius: 20px;
+    font-size: 20px;
+}
+.livestream-btn button:nth-child(1){
+    background-color:#F178B6;
+}
+.livestream-btn button:nth-child(2){
+    background-color:#7879F1;
+    color: white;
+}
+
+
+@media screen and (max-width:950px) {
+    .ChallengeDetail-section1{
+        width: 90%;
+    }
+    .ChallengeDetail-section1 h3{
+    font-size: 27px;
+
+    }
+    .ChallengeDetail-section1 p{
+        text-align: center;
+        font-size: 18px;
+    }
+    .step-container{
+        width: 90%;
+    padding: 50px 20px;
+
+    }
+    .step-container h1{
+        font-size: 28px;
+        text-align: center;
+    }
+    .step-list{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    .step-border{
+        width: 100%;
+    }
+    .step-border h2{
+        font-size: 25px;
+
+    }
+    .step-border p{
+        font-size: 17px;
+    }
+    .challenge-livestream{
+        width: 80%;
+        gap: 30px;
+    }
+    .livestream-btn{
+        gap: 20px;
+        flex-direction: column;
+    }
+}
