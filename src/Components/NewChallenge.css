@@ -72,7 +72,7 @@
 .Newchallenge-button{
     width: 70%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 .Newchallenge-button button{
     padding: 10px 20px;

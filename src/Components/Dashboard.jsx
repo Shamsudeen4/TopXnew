@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from '../Images/Topxtransparent black 1.png'
-import eye from '../Images/Eye.png'
+import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa';
 function Dashboard() {
+  const[showBalance, setShowBalance] = useState(false);
+  const availablebal = 25000;
+  const toggle = ()=> {
+    setShowBalance(!showBalance)
+  }
   return (
     <div>
-      <div className=' flex justify-center my-[5%] pt-[16%]  sm:flex-col '>
+      <div className=' flex justify-center my-[5%] sm:pt-[16%]  sm:flex-col '>
       <div className=' font-worksans flex flex-col items-start gap-[80px] sm:items-center sm:gap-[30px]'>
         <div className=' flex items-center justify-center sm:flex-col-reverse sm:gap-[30px]  '>
             <div className=' flex flex-col'>
@@ -22,12 +27,14 @@ function Dashboard() {
             <div className=' flex flex-col items-start gap-3 '>
               <div className=' flex items-center gap-[30px] '>
                 <p className=' text-[white] text-[20px] sm:w-[60vw]'>Available Balance</p>
-                <img className=' w-[2vw]' src={eye} alt="" />
+                <i onClick={toggle}>
+                  {showBalance ? <FaRegEye/> : <FaRegEyeSlash/> }
+                </i>
               </div>
-              <h1 className=' text-[35px]'>NGN 25,000.00</h1>
+              <h1 className=' text-[35px]'>{showBalance ? `NGN ${availablebal}` : "*****"}</h1>
               <h4 className=' text-[white] text-[20px]'>Estimated Total Balance</h4>
               
-              <button className=' bg-[#373742] text-[white]  rounded-md px-[20px] py-[9px] '>Fund Wallet</button>
+             <a href="/fund"><button className=' bg-[#373742] text-[white]  rounded-md px-[20px] py-[9px] '>Fund Wallet</button></a>
              
             </div>
             <div>

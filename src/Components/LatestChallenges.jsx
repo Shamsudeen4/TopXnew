@@ -81,7 +81,7 @@ function LatestChallenges() {
                 </tr>
                 
             </table>
-            <button className=' text-[#F178B6] text-[18px] underline hover:text-[black] duration-300'><a href="www.google.com"> View All</a></button>
+            <button className=' text-[#F178B6] text-[18px] underline hover:text-[black] duration-300'><a href="/newChallenge"> View All</a></button>
         </div>
       </div>
     </div>

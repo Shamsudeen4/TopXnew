@@ -4,7 +4,7 @@ import './NewChallenge.css'
 
 function NewChallenge() {
   return (
-    <div className='NewChallenge'>
+    <div className='NewChallenge sm:mt-[16%]'>
         <div className='NewChallenge-section1'>
             <h3>Are you a pro gamer?</h3>
             <h3>Challenge someone today and stand a chance to win big bag!</h3>

@@ -1,31 +1,39 @@
 
 import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import Navbar from './Components/Navbar';
 
-import Wallet from './Components/Wallet';
+
+import Wallet from './Components/Walletn';
 import Test from './Components/Test';
-import TrendingBet from './Components/TrendingBet';
-import Latest from './Components/Latest';
-import NewChallenge from './Components/NewChallenge';
-import ChallengeDetail from './Components/ChallengeDetail';
-import Home from './Components/Home';
 
+import Latest from './Components/Latest';
+
+import ChallengeD from './Components/ChallengeD.js';
+import Home from './Components/Home';
+import Trending from './Components/Trending';
+import NewChallenges from './Components/NewChallenges';
+import User from './Components/User';
+import Update from './Components/Update'
+import Fund from './Components/Fund'
 function App() {
   return (
     <div>
       <BrowserRouter>
       <Routes>
-        <Route path='/navbar' element={<Navbar/>}/>
+       
    
         <Route path='/wallet' element={<Wallet/>}/>
         <Route path='/test' element={<Test/>}/>
-        <Route path='/trendingBet' element={<TrendingBet/>}/>
+        <Route path='/user' element={<User/>}/>
+        
         <Route path='/latest' element={<Latest/>}/>
-        <Route path='/newChallenge' element={<NewChallenge/>}/>
-        <Route path='/challengeDetail' element={<ChallengeDetail/>}/>
+        <Route path='/newChallenge' element={<NewChallenges/>}/>
+        <Route path='/challengeDetail' element={<ChallengeD/>}/>
 
-        <Route path='/home' element={<Home/>}/>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/trend' element={<Trending/>}/>
+        <Route path='/update' element={<Update/>}/>
+        <Route path='/fund' element={<Fund/>}/>
 
 
       </Routes>

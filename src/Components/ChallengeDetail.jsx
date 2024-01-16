@@ -20,7 +20,7 @@ function ChallengeDetail() {
         },
     ]
   return (
-    <div className='ChallengeDetail'>
+    <div className='ChallengeDetail sm:mt-[16%]'>
         <div className='ChallengeDetail-section1'>
             <h3>Accept Challenge</h3>
             <p>Once you accept this challenge, amount specified would be deducted from your available balance and if you don’t have enough funds in your wallet it would not go through.</p>

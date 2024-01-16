@@ -4,7 +4,7 @@ import './TrendingBet.css'
 
 function TrendingBet() {
   return (
-    <div className='TrendingBet'>
+    <div className='TrendingBet sm:mt-[16%]'>
         <div className='trending-section1'>
             <h3>Hey Chrismi,</h3>
             <h3>Explore the trending bets</h3>

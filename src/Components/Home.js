@@ -5,7 +5,7 @@ import LatestChallenges from './LatestChallenges'
 import TrendingBets from './TrendingBets'
 function Home() {
   return (
-    <div className=' '>
+    <div className=' overflow-hidden'>
       <NdNavbar dashboard="active" />
       <Dashboard/>
       <LatestChallenges/>

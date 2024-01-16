@@ -55,7 +55,7 @@ function UserPro() {
                 <p className=' text-[#F178B6]'>Do you wish to edit your information?</p>
            
             {/* <div className='bg-[#7879F1] flex justify-center rounded-[20px]  py-6'><h3 className='rotate-[-40deg]  text-[white]'>Verified</h3> </div> */}
-            <button className=' bg-[#F178B6] text-[white] px-8 py-4 rounded-[10px]'>Edit Profile</button>
+            <a href="/update"><button className=' bg-[#F178B6] text-[white] px-8 py-4 rounded-[10px]'>Edit Profile</button></a>
         </div>
        </div>
     </div>

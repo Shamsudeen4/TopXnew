@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
-import Navbar from './Navbar';
+
 import './Wallet.css';
 import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa';
 
 function Wallet() {
   const [showBalance, setShowBalance] = useState(true);
-  const availableBalance = 25000; // Initial balance
+  const availableBalance = 25000; 
 
   const handleToggleBalance = () => {
     setShowBalance((prevShowBalance) => !prevShowBalance);
   };
 
   return (
-    <div className='wallet'>
-      {/* <Navbar/> */}
+    <div className='wallet sm:mt-[16%]'>
+     
       <div className='wallet-section1'>
             <h3>Wallet</h3>
             <p>Manage your wallet and all other transactions</p>
@@ -27,7 +27,7 @@ function Wallet() {
                     <h3>{showBalance ? `NGN ${availableBalance.toFixed(2)}` : '******'}</h3>
                     <p>Estimated Total Balance</p>
                 <div className='wallet-button'>
-                    <button>Fund Wallet</button>
+                    <a href="/fund"><button>Fund Wallet</button></a>
                     <button>Withdraw Funds</button>
                 </div>
         </div>
@@ -40,7 +40,7 @@ function Wallet() {
                     <th>Transaction Type</th>
                     <th>Status</th>
                 </tr>
-                <tr className='wallet-heading'>
+                <tr className='wallet-heading' >
                     <td>1. Wallet funded </td>
                     <td>NGN 20,000 </td>
                     <td>Credit </td>

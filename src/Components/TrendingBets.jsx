@@ -3,7 +3,7 @@ import React from 'react'
 function TrendingBets() {
   return (
     <div className='font-poppins bg-[white]  flex flex-col gap-[70px] w-[100vw] sm:mt-[10%] lg:h-[100vh] justify-center items-center'>
-      <div className=' flex flex-col lg:gap-[50px] lg:p-11 sm:items-center'>
+      <div className=' flex flex-col lg:gap-[50px] lg:p-8 sm:items-center'>
         <div>
             <h1 className=' font-normal text-[22px]'>Trending Bets</h1>
         </div>
@@ -56,7 +56,7 @@ function TrendingBets() {
                 </tr>
                 
             </table>
-            <button className=' text-[#F178B6] text-[18px] underline hover:text-[black] duration-300'><a href="www.google.com"> View All Bets</a></button>
+            <button className=' text-[#F178B6] text-[18px] underline hover:text-[black] duration-300'><a href="/trend"> View All Bets</a></button>
         </div>
       </div>
     </div>

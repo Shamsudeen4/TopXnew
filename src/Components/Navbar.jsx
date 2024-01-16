@@ -7,7 +7,7 @@ function Navbar() {
         setActive(!active)
     }
   return (
-    <div>
+    <div className=' font-worksans'>
         <nav className=' flex items-center bg-[#373742] lg:justify-around lg:gap-[50px] py-[0.9%] sm:py-[1.2%]'>
             <div className=' flex font-worksans  gap-[40px] sm:hidden'>
                 <h2 className='font-semibold text-[white] text-[22px]'>Log In</h2>

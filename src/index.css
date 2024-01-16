@@ -54,3 +54,12 @@ code {
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+ .active::after{
+    content: '';
+    display: flex;
+    height: 3px;
+    background-color: #7879F1;
+    width:100%;
+    
+} 
