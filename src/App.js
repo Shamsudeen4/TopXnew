@@ -15,6 +15,7 @@ import NewChallenges from './Components/NewChallenges';
 import User from './Components/User';
 import Update from './Components/Update'
 import Fund from './Components/Fund'
+import WithdrawFund from './Components/WithdrawFund.js';
 function App() {
   return (
     <div>
@@ -34,6 +35,7 @@ function App() {
         <Route path='/trend' element={<Trending/>}/>
         <Route path='/update' element={<Update/>}/>
         <Route path='/fund' element={<Fund/>}/>
+        <Route path='/withdraw' element={<WithdrawFund/>}/>
 
 
       </Routes>

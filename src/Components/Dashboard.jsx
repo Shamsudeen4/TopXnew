@@ -38,7 +38,7 @@ function Dashboard() {
              
             </div>
             <div>
-              <button className='bg-[white] px-[20px] py-[8px] rounded-md'>Withdraw Funds</button>
+             <a href="/withdraw"> <button className='bg-[white] px-[20px] py-[8px] rounded-md'>Withdraw Funds</button></a>
             </div>
         </div>
       </div>

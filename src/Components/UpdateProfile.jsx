@@ -10,12 +10,12 @@ function UpdateProfile() {
         <form className=' flex flex-col gap-[40px] items-start sm:gap-[45px]'>
             <div className=' flex flex-col gap-3 '>
                 <label className='' htmlFor="email">Email</label>
-                <input className='border-[1px] rounded-[10px] outline-none w-[30vw] sm:w-[70vw] h-[6vh] lg:pl-11 sm:pl-4 active:border-[#F178B6]  duration-150' type="email" placeholder='Enter your Email' />
+                <input className='border-[1px] rounded-[10px] outline-none w-[30vw] sm:w-[70vw] h-[6vh] lg:pl-11 sm:pl-4 focus:border-[#F178B6] duration-150' type="email" placeholder='Enter your Email' />
 
             </div>
             <div className='flex flex-col gap-3 '>
                 <label htmlFor="amount">Full Name </label>
-                <input className='border-[1px] rounded-[10px] outline-none w-[30vw] sm:w-[70vw] h-[6vh] lg:pl-11 sm:pl-4 active:border-[#F178B6]  duration-150' type="text" placeholder='1234567890' />
+                <input className='border-[1px] rounded-[10px] outline-none w-[30vw] sm:w-[70vw] h-[6vh] lg:pl-11 sm:pl-4 focus:border-[#F178B6]  duration-150' type="text" placeholder='1234567890' />
             </div>
             <div className=' flex flex-col gap-3 '>
                     <label htmlFor="amount">Gender </label>
@@ -27,7 +27,7 @@ function UpdateProfile() {
                     </select>
             </div>
               
-            <button className=' bg-[#7879F1] px-6  py-3 rounded-md'>Update</button>
+            <button className=' bg-[#7879F1] px-6  py-3 rounded-md text-[white]'>Update</button>
         </form>
       </div>
     </div>
