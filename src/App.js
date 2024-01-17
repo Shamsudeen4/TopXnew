@@ -16,6 +16,14 @@ import User from './Components/User';
 import Update from './Components/Update'
 import Fund from './Components/Fund'
 import WithdrawFund from './Components/WithdrawFund.js';
+
+
+import Latestt from './Components/Latestt.js';
+import ForgetPassword from './Components/ForgetPassword.js';
+import Loginp from './Components/Loginp.js';
+import MessageT from './Components/MessageT.js';
+import ResetPassword from './Components/ResetPassword.js';
+import SignUpp from './Components/SignUpp.js';
 function App() {
   return (
     <div>
@@ -36,6 +44,13 @@ function App() {
         <Route path='/update' element={<Update/>}/>
         <Route path='/fund' element={<Fund/>}/>
         <Route path='/withdraw' element={<WithdrawFund/>}/>
+        <Route path='/signup' element={<SignUpp/>}/>
+        <Route path='/reset' element={<ResetPassword/>}/>
+        <Route path='/message' element={<MessageT/>}/>
+        <Route path='/login' element={<Loginp/>}/>
+        <Route path='/forget' element={<ForgetPassword/>}/>
+        <Route path='/latestt' element={<Latestt/>}/>
+  
 
 
       </Routes>

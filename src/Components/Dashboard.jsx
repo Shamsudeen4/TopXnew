@@ -25,10 +25,10 @@ function Dashboard() {
          sm:gap-[20px] sm:rounded-[10px] sm:items-start sm:w-[100%] 
          sm:pl-[50px] sm:py-[40px]'>
             <div className=' flex flex-col items-start gap-3 '>
-              <div className=' flex items-center gap-[30px] '>
+              <div className=' flex items-center gap-[30px] sm:gap-[0px] '>
                 <p className=' text-[white] text-[20px] sm:w-[60vw]'>Available Balance</p>
                 <i onClick={toggle}>
-                  {showBalance ? <FaRegEye/> : <FaRegEyeSlash/> }
+                  {showBalance ? <FaRegEye size={22}/> : <FaRegEyeSlash size={22}/> }
                 </i>
               </div>
               <h1 className=' text-[35px]'>{showBalance ? `NGN ${availablebal}` : "*****"}</h1>

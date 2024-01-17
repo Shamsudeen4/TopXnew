@@ -2,6 +2,7 @@
     background: url(../Images/IMG-20240111-WA0017.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+
     height: 100vh;
     width: 100%;
 }
@@ -9,7 +10,7 @@
     .back-img{
     background-repeat: no-repeat;
     background-size: cover;
-    height: 177vh;
+    height: 100vh;
     width: 100%;
     }
 }
