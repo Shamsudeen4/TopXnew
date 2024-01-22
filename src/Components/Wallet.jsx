@@ -21,7 +21,7 @@ function Wallet() {
                 <div className='wallet-available-balance'>
                     <p>Available Balance</p>
                     <i onClick={handleToggleBalance}>
-                    {showBalance ? <FaRegEye /> : <FaRegEyeSlash />}
+                    {showBalance ? <FaRegEye size={22} /> : <FaRegEyeSlash size={22} />}
                     </i>
                 </div>
                     <h3>{showBalance ? `NGN ${availableBalance.toFixed(2)}` : '******'}</h3>

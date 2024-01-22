@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './ChallengeDetail.css'
 
 function ChallengeDetail() {
+    const[showPop, setShowPop]= useState(false)
+    const toggle = () =>{
+        setShowPop(!showPop)
+    }
     const steps = [
         {
             number: '1',
@@ -41,10 +45,25 @@ function ChallengeDetail() {
             <p>Live streaming link: <span>vtttt.co</span></p>
             <div className='livestream-btn'>
                 <button>Cancel</button>
-                <button>Accept</button>
+                <button onClick={toggle}>Accept</button>
             </div>
         </div>
-        
+        <div className={` ${showPop ? 'top-[-800px]' : 'top-[50%] '} absolute transition-[all,3s,ease-linear] p-[150px]`}>
+            <form action="" className='bg-[#e2e1e1] p-11 rounded-lg flex flex-col items-end gap-4 shadow-xl' >
+                <div className=' flex flex-col gap-[10px]'>
+                    <label htmlFor="">Specify the number of rounds you want to go with me:</label>
+                    <select name="" id="" className=' w-[20vw] h-[5vh] rounded-md px-2'>
+                        <option value="">..</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                    </select>
+                </div>
+                <button className={` bg-[#7879F1] text-[white] py-[10px] px-[20px] rounded-[10px]` }>OK</button>
+            </form>
+        </div>
     </div>
   )
 }

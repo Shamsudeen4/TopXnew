@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import img1 from '../Images/signup 1.png'
-import dep from '../Images/Group_26945.png'
-import play from '../Images/Path_529.png'
+import React, { useState } from  'react'
+import img1 from '../Images/Sign-up.png'
+import dep from '../Images/Play.png'
+import play from '../Images/Deposite.png'
 
 import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa';
 import './Signup.css'
@@ -15,70 +15,58 @@ function Signup() {
     setShow(!show)
   }
   return (
-    <div className='backimg  lg:overflow-x-hidden md:overflow-x-hidden sm:overflow-x-hidden font-worksans bg'>
-        <div className=' flex items-center justify-around font-worksans bg-[#5d5fef60] sm:flex-col md:flex-col  absolute left-0 top-0 right-0 bottom-0 '>
-            <div>
-                <div className=' text-center'>
-                <p><span className=' text-white font-bold text-[35px] sm:text-[30px]'>Are You A Gamer?</span> <br/>
-                <span className=' text-white font-bold text-[35px] sm:text-[30px]'>Top X</span> <span className=' text-gray-100 text-[25px] sm:text-[20px] font-light'>
-                 is the best, <br/>platform to earn reward <br/> for your passion
-                </span>
-                </p>
+    <div className='backimg   font-worksans '>
+        <div className=' flex text-[white] items-center lg:gap-[200px] justify-center pt-[2%] sm:flex-col sm:gap-[20px] sm:pt-[4%]'>
+          <div className=' flex flex-col gap-[60px]'>
+            <div className=' flex flex-col gap-3 text-center items-center sm:gap-1'>
+              <h1 className=' font-semibold text-[40px] sm:text-[25px]'>Are You A Gamer?</h1>
+              <h2 className='text-[35px] w-[30vw] leading-[45px] font-extralight sm:text-[18px] sm:w-[75vw] sm:leading-[20px]'><span className=' font-semibold '>Top X </span> is the best platform to earn reward for your passion!</h2>
+            </div>
+            <div className=' flex flex-col gap-[30px] items-center sm:hidden '>
+              <h3 className=' text-[25px] underline'>Get started in 3 steps</h3>
+              <div className=' flex gap-[50px] sm:gap-[20px]'>
+                
+                <div className=' flex flex-col items-center gap-4 '>
+                    <img className='w-[9vw] sm:w-[17vw]' src={img1} alt="" />
+                   <p className=' w-[8vw] sm:w-[28vw]'>Sign Up In less than 15 seconds</p>
                 </div>
-                <div>
-                  <p className=' sm:hidden text-center p-[30px] text-white text-[20px] underline'>Get started in 3step</p>
-              <div className=' flex items-center gap-[30px] relative left-[120px] sm:relative sm:left-[0px]  md:hidden sm:hidden md:relative md:left-[0]'>
-                 <div className=' flex flex-col'>
-                 <div className=' bg-[#5D5FEF] flex flex-col items-center w-28 rounded-[200em] p-[10px]'>
-                  <img src={img1} alt="" />
-                  <p className=' text-white font-worksans'>Sign up</p>
-                  </div>
-                  <p className='  text-white'>
-                    sign up in less<br/> than 15 seconds
-                  </p>
-                 </div>
-                 <div className=' flex flex-col relative top-[40px] sm:relative sm:top-[0px]'>
-                 <div className=' bg-[#7879F1] flex flex-col items-center w-28 rounded-[200em] p-[10px]'>
-                  <img src={dep} alt="" />
-                  <p className=' text-white font-worksans'>Deposite</p>
-                  </div>
-                  <p className=' text-white'>
-                  Deposit & challenge <br/> another  gamer
-                  </p>
-                 </div>
-                  <div className=' flex flex-col relative top-[70px] sm:relative sm:top-[0px]'>
-                  <div className=' bg-[#A5A6F6;] flex flex-col items-center w-28 rounded-[200em] p-[10px]'>
-                  <img src={play} alt="" />
-                  <p className=' text-white font-worksans'>play</p>
-                  </div>
-                  <p className='  text-white'>Play and claim <br/> rewards every day</p>
-                  </div>
-              </div>
+              
+                <div className=' flex flex-col items-center gap-4  mt-[30px]'>
+                   
+                    <img className='w-[9vw] sm:w-[17vw]' src={dep} alt="" />
+                    <p className=' w-[10vw] sm:w-[28vw]'>Deposit & challenge another gamer</p>
+                  
                 </div>
-            </div>
-            {/* first*/}
-            <div className=' font-worksans flex flex-col gap-[35px] bg-[#9395fc80] p-[60px] rounded-[20px] sm:p-[10px] md:p-[55px] sm:gap-[20px]'>
-              <p className=' text-white '><span className=' font-bold text-lg'>Sign up.</span> <span className='text-lg font-light'>it's fast!</span></p>
-              <input type="text" name="" id="" placeholder='Username' className=' outline-none rounded-[5px] p-2 bg-[#D9D9D9] border-[1px] border-solid border-white' />
-              <input type="email" name="" id="" placeholder='Email' className=' outline-none rounded-[5px] p-2 border-[1px] bg-[#D9D9D9] border-solid border-white' />
-              <div className=' flex outline-none rounded-[5px] bg-[#D9D9D9] p-2 border-[1px] border-solid border-white gap-[50px]'>
-              <input type={show ? 'text' : 'password'} name="" id="" placeholder='Password' className=' outline-none bg-transparent '/>
-              <i  onClick={handle}>{show ? <FaRegEye/> : <FaRegEyeSlash/>}</i>
+                <div className=' flex flex-col items-center gap-4 mt-[60px] '>
+                  
+                    <img className='w-[9vw] sm:w-[17vw]' src={play} alt="" />
+                    <p className=' w-[10vw] sm:w-[28vw]'>Play and claim rewards every day</p>
+                  
+                </div>
               </div>
-             <div className='flex flex-col '>
-              <label className=' text-[#F178B6] rounded-[5px]'>Confirm Password</label>
-              <div  className=' outline-[#F178B6] rounded-[5px] flex bg-white items-center gap-[45px]'>
-             <input type={showPassword ? 'text' : 'password'} name="" id=""  className=' outline-none  p-2 ' />
-             <i  onClick={toggle}>{showPassword ? <FaRegEye/> : <FaRegEyeSlash/>}</i>
-              </div>
-            <div className=' flex items-center gap-[10px] pt-3'>
-            <input type="checkbox" name="" id="" className=' bg-black  ' /><p className=' text-white'>
-             I’m over 18 years old and I agree to the <br/> Legal terms and Privacy Policy.
-             </p>
             </div>
-            <button className=' text-white bg-[#7575fc] p-[10px] rounded-[20px] border-solid border-white'>Join</button>
-             </div>
-            </div>
+          </div>
+          <div>
+              <form action="" className='flex flex-col gap-[30px] bg-[#A5A6F6B2] p-[35px] rounded-[20px] text-[white] sm:gap-[20px] sm:p-[20px]' >
+                <h4 className=' text-[30px] sm:text-[20px]'><span className=' font-semibold'> Sign up. </span>It's fast!</h4>
+                <input className='bg-[#D9D9D9] h-[6vh] w-[25vw] rounded-[10px] pl-[10px] outline-none placeholder:text-[white] sm:w-[75vw]' type="text" placeholder='Username'  />
+                <input className=' bg-[#D9D9D9] h-[6vh] w-[25vw] rounded-[10px] pl-[10px] outline-none placeholder:text-[white] sm:w-[75vw]' type="email" placeholder='Email' />
+                
+                <div className=' flex bg-[#D9D9D9] h-[6vh] w-[25vw]  rounded-[10px] items-center px-[10px] sm:w-[75vw] '>
+                <input className={` bg-transparent h-[6vh] w-[25vw] rounded-[10px] pl-[10px] outline-none placeholder:text-[white] sm:w-[70vw]`} type={show ? "text" : "password"} placeholder='Confirm Password' />
+                <i onClick={handle}>{show ? <FaRegEye color='black'/> : <FaRegEyeSlash color='black'/>}</i>
+                </div>
+                <div className=' flex bg-[#D9D9D9] h-[6vh] w-[25vw] rounded-[10px] items-center px-[10px] sm:w-[75vw]'>
+                <input className={` bg-transparent h-[6vh] w-[25vw] rounded-[10px] pl-[10px] outline-none placeholder:text-[white] sm:w-[70vw]`} type={showPassword ? "text" : "password"} placeholder='Confirm Password' />
+                <i onClick={toggle}>{showPassword ? <FaRegEye color='black'/> : <FaRegEyeSlash color='black'/>}</i>
+                </div>
+                <div className=' flex items-center gap-2 '>
+                <input  type="checkbox" name="" id="" />
+                <p className=' w-[24vw] text-[20px] leading-[25px] sm:w-[70vw] sm:text-[14px] sm:leading-[20px]'>I’m over 18 years old and I agree to the Legal terms and Privacy Policy.</p>
+                </div>
+                <button className='bg-[#7879F1] py-[14px] rounded-[30px]'> Join</button>
+              </form>
+          </div>
         </div>
     </div>
   )
