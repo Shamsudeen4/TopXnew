@@ -2,8 +2,11 @@
     background: url(../Images/IMG-20240111-WA0016.jpg );
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    background-position: center;
+    min-height: 84vh;
     width: 100%;
+    background-color: rgba(93, 95, 239, 0.7);
+    /* opacity: 0.5; */
 }
 @media screen and (max-width: 960px) {
     .back-img{
