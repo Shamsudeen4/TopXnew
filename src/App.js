@@ -9,7 +9,7 @@ import Test from './Components/Test';
 import Latest from './Components/Latest';
 
 import ChallengeD from './Components/ChallengeD.js';
-import Home from './Components/Home';
+
 import Trending from './Components/Trending';
 import NewChallenges from './Components/NewChallenges';
 import User from './Components/User';
@@ -24,14 +24,16 @@ import Loginp from './Components/Loginp.js';
 import MessageT from './Components/MessageT.js';
 import ResetPassword from './Components/ResetPassword.js';
 import SignUpp from './Components/SignUpp.js';
+import Dashboard from './Components/Home.js';
 function App() {
   return (
-    <div>
+    <div className=''>
       <BrowserRouter>
       <Routes>
        
    
         <Route path='/wallet' element={<Wallet/>}/>
+        <Route path='/home' element={<Dashboard/>}/>
         <Route path='/test' element={<Test/>}/>
         <Route path='/user' element={<User/>}/>
         
@@ -39,12 +41,12 @@ function App() {
         <Route path='/newChallenge' element={<NewChallenges/>}/>
         <Route path='/challengeDetail' element={<ChallengeD/>}/>
 
-        <Route path='/' element={<Home/>}/>
+        <Route path='/' element={<SignUpp/>}/>
         <Route path='/trend' element={<Trending/>}/>
         <Route path='/update' element={<Update/>}/>
         <Route path='/fund' element={<Fund/>}/>
         <Route path='/withdraw' element={<WithdrawFund/>}/>
-        <Route path='/signup' element={<SignUpp/>}/>
+     
         <Route path='/reset' element={<ResetPassword/>}/>
         <Route path='/message' element={<MessageT/>}/>
         <Route path='/login' element={<Loginp/>}/>

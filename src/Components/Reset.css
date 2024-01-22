@@ -1,29 +1,40 @@
 .resimg{
     background: url(../Images/IMG-20240111-WA0016.jpg );
     background-repeat: no-repeat;
+    min-height: 90%;
+    background-size: cover;
 
-    backdrop-filter: opacity(0.8);
-    background-size: 100% 90%;
-    height: 100vh;
-    width: 100%;
 }
 .resimg::after {
     content: '';
     display: block;
     position: absolute;
-    top: 0;
+    top: 110px;
     right: 0;
     bottom: 0;
     left: 0;
-   
-     /* Adjust the color and opacity as needed */
-    backdrop-filter: opacity(0.1); /* Adjust the filter effect as needed */
+    background-color: #5D5FEF80;
+    /* z-index: -1000; */
+    max-height: 90%;
   }
-@media screen and (max-width: 960px) {
-    .back-img{
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 177vh;
-    width: 100%;
+@media screen and (max-width: 950px) {
+    .resimg{
+        background: url(../Images/IMG-20240111-WA0016.jpg );
+        background-repeat: no-repeat;
+        min-height: 90%;
+        background-size: cover;
+    
     }
+    .resimg::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 72px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #5D5FEF80;
+        /* z-index: -1000; */
+        max-height: 100%;
+      }
 }

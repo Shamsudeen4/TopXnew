@@ -24,7 +24,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+body, code{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
 .toggle {
   @apply bg-transparent flex cursor-pointer min-w-[40px] h-[40px] flex-col items-center justify-center gap-[5px]  rounded-[10px];
 }
