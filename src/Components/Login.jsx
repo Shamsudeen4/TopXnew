@@ -20,6 +20,12 @@ function Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    if(!username){
+      throw new Error("Username is required!!")
+    }
+    if(!password){
+      throw new Error("Password is required!!")
+    }
 
     fetch('https://topxx.onrender.com/signin', {
       method: 'POST',
