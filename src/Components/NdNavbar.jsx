@@ -1,12 +1,37 @@
 import React from 'react'
 import logo from '../Images/Topxtransparent black (1) 2.png'
-import user from '../Images/User.png'
-import { useState } from 'react';
+import userPro from '../Images/User.png'
+import { useState, useEffect } from 'react';
+import { useContext } from 'react';
+import { UserContext } from './Context/UserContext';
 function NdNavbar(props) {
+  const {user, setUser} = useContext(UserContext) 
+  const [data, setData] = useState('')
   const [menu, setMenu] = useState(false);
   const toggleMenu = () => {
     setMenu(!menu);
   };
+
+  const EndPoint = 'https://topxx.onrender.com/user-dashboard'
+  useEffect(() => {
+    const handleData = async () => {
+      try {
+        const response = await fetch(EndPoint);
+        if (!response.ok) {
+          throw new Error('error');
+        }
+        const responseData = await response.json();
+        setUser(responseData);
+        setData(responseData)
+        console.log(responseData);
+      } catch (error) {
+        console.error('Error fetching Data', error);
+      }
+    };
+
+    handleData();
+  }, [setUser]);
+
   return (
     <div className='font-worksans '>
       <div className=' text-[white] flex bg-[#373742] justify-center sm:items-center lg:gap-[100px] sm:gap-[30px] py-[1%]  '>
@@ -31,8 +56,9 @@ function NdNavbar(props) {
             <div className=' flex items-center bg-[#7879F1] justify-center 
                               lg:p-[7px] rounded-md lg:pr-[22px] sm:px-[15px] sm:py-[8px] 
                               sm:pr-[25px] lg:gap-[10px] sm:gap-[10px]'>
-                <img className='sm:w-[6vw]' src={user} alt="" />
-                <p>Shamsudeen</p>
+                <img className='sm:w-[6vw]' src={userPro} alt="" />
+                <p>{user?.user?.username}</p>
+                <p>{data?.user?.username}</p>
             </div>
             </a>
             </div>

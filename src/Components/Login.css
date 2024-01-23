@@ -1,20 +1,17 @@
 .back-img{
     background: url(../Images/IMG-20240111-WA0016.jpg );
     background-repeat: no-repeat;
-<<<<<<< HEAD
     background-size: cover;
     background-position: center;
     min-height: 84vh;
     width: 100%;
     background-color: rgba(93, 95, 239, 0.7);
     /* opacity: 0.5; */
-=======
     opacity: 0.9;
  
     background-size: 100% 86%;
   
     z-index: -999px;
->>>>>>> 1eb48df67b37912cc76b4e57b9ff26cb66ff1f89
 }
 .back-img::before {
     content: '';
