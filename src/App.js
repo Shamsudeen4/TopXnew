@@ -25,12 +25,12 @@ import MessageT from './Components/MessageT.js';
 import ResetPassword from './Components/ResetPassword.js';
 import SignUpp from './Components/SignUpp.js';
 import Dashboard from './Components/Home.js';
+import { UserProvider } from './Components/Context/UserContext.js';
 function App() {
   return (
-    <div className=''>
+    <UserProvider>
       <BrowserRouter>
       <Routes>
-       
    
         <Route path='/wallet' element={<Wallet/>}/>
         <Route path='/home' element={<Dashboard/>}/>
@@ -52,12 +52,11 @@ function App() {
         <Route path='/login' element={<Loginp/>}/>
         <Route path='/forget' element={<ForgetPassword/>}/>
         <Route path='/latestt' element={<Latestt/>}/>
-  
-
 
       </Routes>
       </BrowserRouter>
-    </div>
+      </UserProvider>
+
   );
 }
 

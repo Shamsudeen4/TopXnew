@@ -2,13 +2,19 @@ import React, { useState } from 'react';
 import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa';
 import './Login.css';
 import { Navigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { UserContext } from './Context/UserContext';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 
 function Login() {
+  const {setUser} = useContext(UserContext)
   const [showPassword, setShowPassword] = useState(false);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [responseMessage, setResponseMessage] = useState('');
   const [redirect, setRedirect] = useState(false)
+  const[isclick, setIsClick] = useState(false)
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
@@ -18,13 +24,20 @@ function Login() {
     setPassword(event.target.value);
   };
 
+
   const handleSubmit = (event) => {
+    setIsClick(true)
     event.preventDefault();
+
+
     if(!username){
-      throw new Error("Username is required!!")
+      toast.error("Username is required!!")
+      setIsClick(false)
+      return;
     }
     if(!password){
-      throw new Error("Password is required!!")
+      toast.error("Password is required!!")
+      setIsClick(false)
     }
 
     fetch('https://topxx.onrender.com/signin', {
@@ -36,10 +49,12 @@ function Login() {
     })
       .then((response) => response.json())
       .then((data) => {
-        setResponseMessage(data.message);
+        setResponseMessage(data.msg);
 
-        if (data.message === 'Logged in successfully') {
-          setRedirect(false)
+        if (data.msg) {
+          setUser(data)
+          setRedirect(true)
+          window.location.href = "/home"
         }
         setRedirect(false)
         
@@ -47,15 +62,19 @@ function Login() {
       .catch((error) => {
         console.error('Error:', error);
         setResponseMessage('An error occurred while processing your request.');
+        setRedirect(false)
+        return;
       });
   };
-  if(redirect){
-    return <Navigate to={"/"}/>
-  }
+  
 
   const toggle = () => {
     setShowPassword(!showPassword);
   };
+
+  if(redirect){
+    return <Navigate to={"/home"}/>
+  }
 
   return (
     <div className='back-img flex justify-evenly items-center sm:flex-col sm:p-[20px]'>
@@ -92,6 +111,9 @@ function Login() {
         <button type='submit' className='bg-[#7879F1] rounded-xl p-[10px] text-[#FFFFFF]'>
           Log In
         </button>
+        <ToastContainer
+          position='top-left' 
+        />
       </form>
     </div>
   );
