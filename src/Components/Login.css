@@ -1,12 +1,6 @@
 .back-img{
     background: url(../Images/IMG-20240111-WA0016.jpg );
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    min-height: 84vh;
-    width: 100%;
-    background-color: rgba(93, 95, 239, 0.7);
-    /* opacity: 0.5; */
     opacity: 0.9;
  
     background-size: 100% 86%;
